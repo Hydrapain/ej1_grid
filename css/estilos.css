@@ -1,0 +1,110 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.grid-container {
+    display: grid;
+    /* height: 400px; */
+    /* inline-grid lo estruja */
+    /* grid-column-gap: 50px;
+grid-row-gap: 50px; */
+    grid-gap: 10px;
+    /* si solo aplico un valor es común para los dos */
+    grid-template-areas:
+        'header header header header header header header'
+        'menu menu main main main right right'
+        'footer footer footer footer footer footer footer';
+    /* grid-template-columns: auto auto auto auto auto auto; /* otro auto = + columnas. 80px 200px auto 40px */
+    /* justify-content: space-evenly; grid-template-rows: 80px 200px; space-around; space-between; center; */
+    align-content: center;
+    /*center, space-evenly, space around, space-between, start, end */
+    background-color: brown;
+    padding: 10px;
+}
+
+.grid-container>div {
+    background-color: rgba(255, 255, 255, .8);
+    font-size: 2em;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* .item1 {
+    grid-row: 1 /span 2;
+}
+                    */
+
+/* .item8 {
+    grid-area: 1 / 2 / 5 / 6; 
+} */
+
+.item1 {
+    grid-area: header;
+}
+
+.item2 {
+    grid-area: menu;
+}
+
+.item3 {
+    grid-area: main;
+}
+
+.item4 {
+    grid-area: right;
+}
+
+.item5 {
+    grid-area: footer;
+}
+
+/* .item1 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+} */
